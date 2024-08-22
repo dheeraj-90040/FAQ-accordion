@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --font--: "Work Sans", sans-serif;
+    --primary--: hsl(0, 0%, 100%);
+    --secondry--: hsl(275, 100%, 97%);
+    --accent1--: hsl(292, 16%, 49%);
+    --accent2--: hsl(292, 42%, 14%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font--);
+    background-color: var(--secondry--);
+}
+
+.bg {
+    width: 100%;
+    height: 40vh;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    background-color: var(--primary--);
+    border-radius: 1rem;
+    padding: 1.5rem 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+}
+
+.header .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+hr {
+    border: 1.5px solid rgba(205, 205, 205, 0.558);
+    border-radius: 1rem;
+    margin: .5rem;
+}
+
+.content .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: .8rem 0;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: var(--font--);
+    font-weight: 700;
+    word-spacing: .1rem;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+h4:hover {
+    color: #9a42c1;
+}
+
+.content .faq .Plus_Icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p {
+    font-size: 16px;
+    font-family: var(--font--);
+    font-weight: 400;
+    text-align: start;
+    line-height: 24px;
+    padding-right: 3rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    h4 span {
+        padding-left: 1.5rem;
+    }
+
+    .header {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: 14px;
+        padding-right: 0;
+    }
+
+    p {
+        font-size: 14px;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        width: 75%;
+        height: auto;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    h4 span {
+        padding-left: 1.5rem;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 15px;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1240px) {
+    .container {
+        width: 60%;
+    }
+
+    .header {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    h4 span {
+        padding-left: 1.5rem;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
